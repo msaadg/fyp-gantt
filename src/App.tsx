@@ -331,7 +331,7 @@ const GanttChart = () => {
   return (
     <div className="w-full h-screen bg-gray-900 text-white p-6 overflow-auto">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold mb-2">Design and Optimization of Wind Turbine Airfoils using a Custom Differentiable CFD Simulator</h1>
+        <h1 className="text-3xl font-bold mb-2">Differentiable Fluid Simulation for Wind Turbine Airfoil Shape Optimization</h1>
         <p className="text-gray-400">Kaavish I & II - Planning</p>
       </div>
 
