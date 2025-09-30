@@ -448,7 +448,7 @@ const GanttChart = () => {
             {Object.values(users)
             .filter(user => user.name !== 'Everyone') // Don't show "Everyone" in legend
             .map(user => (
-              <div key={user.name} className="justify-items-center gap-1">
+              <div key={user.name} className="flex flex-col items-center gap-1">
                 <UserAvatar user={user} size="lg" />
                 <span>{user.name}</span>
               </div>
