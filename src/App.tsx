@@ -86,25 +86,25 @@ const GanttChart = () => {
       name: 'Anas', 
       color: 'bg-orange-500', 
       initials: 'A',
-      avatar: '/src/assets/avatars/anas.png'
+      avatar: '/avatars/anas.png'
     },
     'Meesum': { 
       name: 'Meesum', 
       color: 'bg-green-500', 
       initials: 'M',
-      avatar: '/src/assets/avatars/meesum.png'
+      avatar: '/avatars/meesum.png'
     },
     'Musab': { 
       name: 'Musab', 
       color: 'bg-blue-500', 
       initials: 'Mu',
-      avatar: '/src/assets/avatars/musab.png'
+      avatar: '/avatars/musab.png'
     },
     'Saad': { 
       name: 'Saad', 
       color: 'bg-purple-500', 
       initials: 'S',
-      avatar: '/src/assets/avatars/saad.png'
+      avatar: '/avatars/saad.png'
     },
     'Everyone': { name: 'Everyone', color: 'bg-gray-500', initials: 'E' }
   };
