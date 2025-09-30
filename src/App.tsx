@@ -6,10 +6,10 @@ type UserKey = 'Anas' | 'Meesum' | 'Musab' | 'Saad' | 'Everyone';
 // UserAvatar component
 const UserAvatar: React.FC<{ 
   user: { name: string; color: string; initials: string; avatar?: string }; 
-  size?: 'sm' | 'md' 
+  size?: 'sm' | 'md' | 'lg'
 }> = ({ user, size = 'sm' }) => {
   const [imageError, setImageError] = useState(false);
-  const sizeClasses = size === 'sm' ? 'w-8 h-8' : 'w-6 h-6';
+  const sizeClasses = size === 'sm' ? 'w-8 h-8' : size === 'md' ? 'w-10 h-10' : 'w-12 h-12';
   const textSize = size === 'sm' ? 'text-xs' : 'text-xs';
   
   if (user.avatar && !imageError) {
@@ -39,7 +39,7 @@ const UserAvatar: React.FC<{
 const TeamAvatars: React.FC<{ 
   leads: UserKey[];
   users: Record<UserKey, { name: string; color: string; initials: string; avatar?: string }>;
-  size?: 'sm' | 'md'
+  size?: 'sm' | 'md' | 'lg';
 }> = ({ leads, users, size = 'sm' }) => {
   // If "Everyone" is in the leads, show all team members except "Everyone"
   if (leads.includes('Everyone')) {
@@ -441,19 +441,19 @@ const GanttChart = () => {
         ))}
       </div>
 
-      <div className="mt-8 text-sm text-gray-400">
-        <p>💡 Hover over tasks to see drag handles on both edges</p>
-        <p>🔄 Drag left edge to adjust start time, drag right edge to adjust duration</p>
-        <div className="mt-2 flex gap-4 flex-wrap">
+      <div className="mt-4 text-sm text-gray-400">
+        <div className="gap-4">
           <span className="font-semibold">Team Members:</span>
-          {Object.values(users)
+          <div className='flex flex-wrap gap-6 mt-2'>
+            {Object.values(users)
             .filter(user => user.name !== 'Everyone') // Don't show "Everyone" in legend
             .map(user => (
-              <div key={user.name} className="flex items-center gap-1">
-                <UserAvatar user={user} size="md" />
+              <div key={user.name} className="justify-items-center gap-1">
+                <UserAvatar user={user} size="lg" />
                 <span>{user.name}</span>
               </div>
             ))}
+          </div>
         </div>
       </div>
     </div>
