@@ -331,8 +331,8 @@ const GanttChart = () => {
   return (
     <div className="w-full h-screen bg-gray-900 text-white p-6 overflow-auto">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold mb-2">CS Capstone Project Timeline</h1>
-        <p className="text-gray-400">Kaavish I & II - Drag and extend tasks from either edge</p>
+        <h1 className="text-3xl font-bold mb-2">Design and Optimization of Wind Turbine Airfoils using a Custom Differentiable CFD Simulator</h1>
+        <p className="text-gray-400">Kaavish I & II - Planning</p>
       </div>
 
       <div className="relative">
